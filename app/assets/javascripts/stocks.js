@@ -16,7 +16,7 @@ init_stock_lookup = function(){
     
     $('#stock-lookup-form').on('ajax:error', function(event, xhr, data, status){
         hide_spinner();
-        $('#stock-lookup-results').replaceWith(' ');
+        $('#stock-lookup-result').replaceWith(' ');
         $('#stock-lookup-errors').replaceWith('Quotestock was not found');
     });
 }
