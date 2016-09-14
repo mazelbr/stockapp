@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
   
   resources :user_stocks, except: [:show, :edit, :update]
+  resources :users, only: [:show]
+  resources :friendships
   
   get 'my_portfolio', to: "users#my_portfolio"
   
